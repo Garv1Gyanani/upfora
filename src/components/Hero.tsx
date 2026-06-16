@@ -1,3 +1,4 @@
+import { Rocket, Zap } from 'lucide-react';
 import './Hero.css';
 
 export default function Hero() {
@@ -89,14 +90,14 @@ export default function Hero() {
         </div>
 
         <div className="hero-side-card hsc-1">
-          <div className="hsc-icon">🚀</div>
+          <div className="hsc-icon"><Rocket size={16} /></div>
           <div className="hsc-text">
             <span className="hsc-label">NutriCore App</span>
             <span className="hsc-sub">Built in 5 days</span>
           </div>
         </div>
         <div className="hero-side-card hsc-2">
-          <div className="hsc-icon">⚡</div>
+          <div className="hsc-icon"><Zap size={16} /></div>
           <div className="hsc-text">
             <span className="hsc-label">20+ Products Shipped</span>
             <span className="hsc-sub">SaaS · Mobile · AI</span>

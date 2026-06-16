@@ -229,7 +229,7 @@
 .hsc-icon{
   width:32px;height:32px;border-radius:8px;background:var(--accent-dim);
   border:1px solid var(--accent-border);display:flex;align-items:center;justify-content:center;
-  font-size:0.9rem;flex-shrink:0;
+  color:var(--accent);flex-shrink:0;
 }
 .hsc-text{display:flex;flex-direction:column;gap:0.1rem}
 .hsc-label{font-size:0.75rem;font-weight:600;color:var(--text)}

@@ -1,4 +1,23 @@
 import { useState, type MouseEvent } from 'react';
+import { 
+  Monitor, 
+  Cpu, 
+  Wrench, 
+  ShoppingCart, 
+  GraduationCap, 
+  Heart, 
+  Users, 
+  Smartphone, 
+  BarChart3, 
+  FileEdit, 
+  MessageSquare, 
+  FolderClosed,
+  Zap,
+  Tag,
+  AlertTriangle,
+  Settings,
+  Star
+} from 'lucide-react';
 import './Projects.css';
 
 interface Project {
@@ -92,10 +111,18 @@ const P: Project[] = [
 ];
 
 const caps = [
-  {icon:'💻',t:'SaaS',n:3},{icon:'🤖',t:'AI',n:2},{icon:'🛠️',t:'Dev Tools',n:2},
-  {icon:'🛒',t:'E-commerce',n:1},{icon:'🎓',t:'Education',n:1},{icon:'❤️',t:'Health',n:1},
-  {icon:'🤝',t:'Marketplaces',n:1},{icon:'📱',t:'Mobile',n:2},{icon:'📊',t:'Dashboards',n:4},
-  {icon:'📝',t:'CMS',n:2},{icon:'💬',t:'Chat',n:1},{icon:'📁',t:'File Infra',n:2},
+  {icon: <Monitor size={22} />, t:'SaaS', n:3},
+  {icon: <Cpu size={22} />, t:'AI', n:2},
+  {icon: <Wrench size={22} />, t:'Dev Tools', n:2},
+  {icon: <ShoppingCart size={22} />, t:'E-commerce', n:1},
+  {icon: <GraduationCap size={22} />, t:'Education', n:1},
+  {icon: <Heart size={22} />, t:'Health', n:1},
+  {icon: <Users size={22} />, t:'Marketplaces', n:1},
+  {icon: <Smartphone size={22} />, t:'Mobile', n:2},
+  {icon: <BarChart3 size={22} />, t:'Dashboards', n:4},
+  {icon: <FileEdit size={22} />, t:'CMS', n:2},
+  {icon: <MessageSquare size={22} />, t:'Chat', n:1},
+  {icon: <FolderClosed size={22} />, t:'File Infra', n:2},
 ];
 
 export default function Projects() {
@@ -172,14 +199,14 @@ export default function Projects() {
           </div>
           {/* Floating cards */}
           <div className="sc-fl sc-fl-1">
-            <span className="sc-fl-ico">⚡</span>
+            <span className="sc-fl-ico"><Zap size={14} /></span>
             <div className="sc-fl-body">
               <span className="sc-fl-v">{active.timeline}</span>
               <span className="sc-fl-l">Delivery</span>
             </div>
           </div>
           <div className="sc-fl sc-fl-2">
-            <span className="sc-fl-ico">🏷️</span>
+            <span className="sc-fl-ico"><Tag size={14} /></span>
             <div className="sc-fl-body">
               <span className="sc-fl-v">{active.industry}</span>
               <span className="sc-fl-l">Industry</span>
@@ -222,13 +249,13 @@ export default function Projects() {
 
             {/* Challenge */}
             <div className="tb-sec">
-              <h4><span className="tb-ico">⚠️</span> The Challenge</h4>
+              <h4><span className="tb-ico"><AlertTriangle size={15} /></span> The Challenge</h4>
               <p>{active.problem}</p>
             </div>
 
             {/* Built */}
             <div className="tb-sec">
-              <h4><span className="tb-ico">🛠️</span> What Was Built</h4>
+              <h4><span className="tb-ico"><Wrench size={15} /></span> What Was Built</h4>
               <ul className="tb-list">
                 {active.built.map((f, i) => (
                   <li key={i}><span className="tb-chk">✓</span>{f}</li>
@@ -238,7 +265,7 @@ export default function Projects() {
 
             {/* Tech */}
             <div className="tb-sec">
-              <h4><span className="tb-ico">⚙️</span> Tech Stack</h4>
+              <h4><span className="tb-ico"><Settings size={15} /></span> Tech Stack</h4>
               <div className="tb-chips">
                 {active.tech.map((t, i) => <span key={i} className="tb-chip">{t}</span>)}
               </div>
@@ -246,7 +273,9 @@ export default function Projects() {
 
             {/* Value */}
             <div className="tb-value">
-              <span className="tb-val-tag">⭐ Why It Matters</span>
+              <span className="tb-val-tag">
+                <span className="tb-val-tag-icon"><Star size={12} fill="currentColor" /></span> Why It Matters
+              </span>
               <p>{active.whyMatters}</p>
             </div>
 
