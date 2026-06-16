@@ -1,0 +1,35 @@
+footer{
+  border-top:1px solid var(--border);
+  padding:2.5rem 6%;
+  display:flex;justify-content:space-between;align-items:center;
+  flex-wrap:wrap;gap:1.5rem;background:var(--bg);
+}
+.f-logo{
+  font-family:var(--mono);font-weight:700;color:var(--text);
+  text-decoration:none;font-size:0.9rem;letter-spacing:0.18em;
+  display:flex;align-items:center;gap:0.5rem;
+  transition:opacity 0.3s ease;
+}
+.f-logo:hover{opacity:0.8}
+.f-logo-mark{
+  width:24px;height:24px;background:var(--accent);border-radius:5px;
+  display:flex;align-items:center;justify-content:center;
+  transition:transform 0.3s ease;
+}
+.f-logo:hover .f-logo-mark{transform:rotate(-8deg) scale(1.1)}
+.f-logo-mark svg{width:12px;height:12px;stroke:var(--bg);stroke-width:2.5;fill:none}
+.f-links{display:flex;gap:1.75rem}
+.f-links a{
+  color:var(--muted);text-decoration:none;font-size:0.82rem;
+  transition:all 0.3s ease;position:relative;
+}
+.f-links a::after{
+  content:'';position:absolute;bottom:-2px;left:0;width:0;height:1px;
+  background:var(--accent);transition:width 0.3s ease;
+}
+.f-links a:hover{color:var(--text)}
+.f-links a:hover::after{width:100%}
+.f-copy{font-family:var(--mono);font-size:0.7rem;color:var(--muted)}
+@media(max-width:540px){
+  footer{flex-direction:column;align-items:flex-start}
+}
